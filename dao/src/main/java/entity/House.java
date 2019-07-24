@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "house")
-public class HouseEntity {
+public class House {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,8 +17,15 @@ public class HouseEntity {
     private String bedRoomQuantity;
     private String price;
 
-    public HouseEntity() {
+    public House() {
     }
+    @ManyToOne(targetEntity = Status.class)
+    @JoinColumn(name = "id_status")
+    private Status status;
+
+    @ManyToOne(targetEntity = Province.class)
+    @JoinColumn(name = "id_province")
+    private Province province;
 
     public Long getId() {
         return id;
@@ -74,5 +81,21 @@ public class HouseEntity {
 
     public void setPrice(String price) {
         this.price = price;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public Province getProvince() {
+        return province;
+    }
+
+    public void setProvince(Province province) {
+        this.province = province;
     }
 }

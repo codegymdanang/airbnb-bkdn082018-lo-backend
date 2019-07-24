@@ -43,4 +43,5 @@ public class Village {
         this.id = id;
         this.name = name;
     }
+
 }
