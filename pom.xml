@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <modules>
-    <module>web</module>
+
     <module>dao</module>
     <module>webservice</module>
     <module>common</module>
-    <module>configure</module>
+
     <module>business-service</module>
   </modules>
 
