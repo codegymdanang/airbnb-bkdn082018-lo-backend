@@ -1,9 +1,7 @@
 package entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
+import javax.persistence.*;
 import java.util.List;
 
 public class Status {
@@ -15,6 +13,9 @@ public class Status {
 
     @OneToMany(targetEntity = House.class)
     private List<House> houseList;
+
+    public Status() {
+    }
 
     public Long getId() {
         return id;

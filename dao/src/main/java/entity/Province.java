@@ -18,6 +18,9 @@ public class Province {
     @OneToMany(targetEntity = House.class)
     private List<House> houseList;
 
+    @OneToMany(targetEntity = Account.class)
+    private List<Account> accountList;
+
     public List<District> getDistrictList() {
         return districtList;
     }
@@ -56,5 +59,13 @@ public class Province {
 
     public void setHouseList(List<House> houseList) {
         this.houseList = houseList;
+    }
+
+    public List<Account> getAccountList() {
+        return accountList;
+    }
+
+    public void setAccountList(List<Account> accountList) {
+        this.accountList = accountList;
     }
 }

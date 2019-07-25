@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "house")
@@ -11,11 +12,16 @@ public class House {
     private Long id;
 
     private String name;
+
     private String image;
+
     private String description;
-    private String bathRoomQuantity;
-    private String bedRoomQuantity;
-    private String price;
+
+    private int bathRoomQuantity;
+
+    private int bedRoomQuantity;
+
+    private int price;
 
     public House() {
     }
@@ -26,6 +32,9 @@ public class House {
     @ManyToOne(targetEntity = Province.class)
     @JoinColumn(name = "id_province")
     private Province province;
+
+    @OneToMany(targetEntity = OrderDetail.class)
+    private List<OrderDetail> orderDetailList;
 
     public Long getId() {
         return id;
@@ -43,15 +52,15 @@ public class House {
         return description;
     }
 
-    public String getBathRoomQuantity() {
+    public int getBathRoomQuantity() {
         return bathRoomQuantity;
     }
 
-    public String getBedRoomQuantity() {
+    public int getBedRoomQuantity() {
         return bedRoomQuantity;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
@@ -71,15 +80,15 @@ public class House {
         this.description = description;
     }
 
-    public void setBathRoomQuantity(String bathRoomQuantity) {
+    public void setBathRoomQuantity(int bathRoomQuantity) {
         this.bathRoomQuantity = bathRoomQuantity;
     }
 
-    public void setBedRoomQuantity(String bedRoomQuantity) {
+    public void setBedRoomQuantity(int bedRoomQuantity) {
         this.bedRoomQuantity = bedRoomQuantity;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
@@ -97,5 +106,13 @@ public class House {
 
     public void setProvince(Province province) {
         this.province = province;
+    }
+
+    public List<OrderDetail> getOrderDetailList() {
+        return orderDetailList;
+    }
+
+    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
+        this.orderDetailList = orderDetailList;
     }
 }
