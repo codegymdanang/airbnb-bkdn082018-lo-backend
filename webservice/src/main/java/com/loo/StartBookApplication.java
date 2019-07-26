@@ -13,8 +13,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 @EntityScan("com.codegym.entity")
-@EnableJpaRepositories(basePackages = "com.codegym.repository")
-@ComponentScan(basePackages = {"com.looo.service", "com.looo.impl", "com.codegym.entity", "com.loo.controller"})
+@EnableJpaRepositories(basePackages = {"com.codegym.repository"})
+@ComponentScan(basePackages = {  "com.codegym.entity", "com.loo.controller","com.codegym.repository"})
 public class StartBookApplication {
 
     // start everything

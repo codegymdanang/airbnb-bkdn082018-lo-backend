@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:context="http://www.springframework.org/schema/context"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <artifactId>parent</artifactId>
@@ -13,6 +14,7 @@
   <groupId>codegymdanang</groupId>
   <version>1.0-SNAPSHOT</version>
   <artifactId>webservice</artifactId>
+
 
 
   <properties>
@@ -79,6 +81,12 @@
     <dependency>
       <groupId>codegymdanang</groupId>
       <artifactId>dao</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>codegymdanang</groupId>
+      <artifactId>business-service</artifactId>
       <version>1.0-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>

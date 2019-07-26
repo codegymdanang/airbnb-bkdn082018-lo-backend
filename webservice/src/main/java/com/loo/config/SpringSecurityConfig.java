@@ -6,6 +6,8 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.util.matcher.AndRequestMatcher;
+
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -35,7 +37,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.PATCH, "/books/**").hasRole("ADMIN")
                 .antMatchers(HttpMethod.DELETE, "/books/**").hasRole("ADMIN")
                 .and()
-
+                .formLogin()
+//                .and()
+//                .logout()
+                .and()
                 .csrf().disable()
                 .formLogin().disable();
     }
