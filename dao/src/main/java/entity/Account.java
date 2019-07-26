@@ -27,6 +27,8 @@ public class Account {
     @JoinColumn(name = "id_province")
     private Province province;
 
+    @OneToMany(targetEntity = House.class)
+    private List<House> houseList;
 
     @OneToMany(targetEntity = OrderDetail.class)
     private List<OrderDetail> orderDetailList;
@@ -108,6 +110,14 @@ public class Account {
 
     public List<Rating> getRatingList() {
         return ratingList;
+    }
+
+    public List<House> getHouseList() {
+        return houseList;
+    }
+
+    public void setHouseList(List<House> houseList) {
+        this.houseList = houseList;
     }
 
     public void setRatingList(List<Rating> ratingList) {

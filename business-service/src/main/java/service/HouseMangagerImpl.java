@@ -13,6 +13,10 @@ public class HouseMangagerImpl implements HouseMangager {
     HouseRepository houseRepository;
 
     @Override
+    public Iterable<House> findAll(){
+        return  houseRepository.findAll();
+    }
+    @Override
     public Page<House> getAllHouse(Pageable pageable) {
         return houseRepository.findAll(pageable);
     }
@@ -26,6 +30,7 @@ public class HouseMangagerImpl implements HouseMangager {
     public void remove(Long id) {
         houseRepository.deleteById(id);
     }
+
 
     @Override
     public Optional<House> findByid(Long id) {

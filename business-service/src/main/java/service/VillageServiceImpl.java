@@ -1,17 +1,17 @@
 package service;
 
-import entity.Province;
+import entity.Village;
 import org.springframework.beans.factory.annotation.Autowired;
-import repository.ProvinceRepository;
+import repository.VillageRepository;
 
 import java.util.List;
 
-public class VillageServiceImpl implements ProvinceService {
+public class VillageServiceImpl implements VillageService {
 
     @Autowired
-    private ProvinceRepository provinceRepository;
+    private VillageRepository villageRepository;
     @Override
-    public List<Province> findAll() {
-        return provinceRepository.findAll();
+    public List<Village> findAll() {
+        return villageRepository.findAll();
     }
 }

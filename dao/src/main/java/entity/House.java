@@ -36,6 +36,10 @@ public class House {
     @OneToMany(targetEntity = OrderDetail.class)
     private List<OrderDetail> orderDetailList;
 
+    @ManyToOne(targetEntity = Account.class)
+    @JoinColumn(name = "id_account")
+    private Account account;
+
     public Long getId() {
         return id;
     }
@@ -114,5 +118,13 @@ public class House {
 
     public void setOrderDetailList(List<OrderDetail> orderDetailList) {
         this.orderDetailList = orderDetailList;
+    }
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
