@@ -7,14 +7,15 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 //@SpringBootApplication
-
+@EnableWebSecurity
 @Configuration
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 @EntityScan("com.codegym.entity")
 @EnableJpaRepositories(basePackages = {"com.codegym.repository"})
-@ComponentScan(basePackages = {  "com.codegym.entity", "com.loo.controller","com.codegym.repository"})
+@ComponentScan(basePackages = {  "com.codegym.entity", "com.loo.controller","com.loo.config","com.looo.service","com.codegym.repository"})
 public class StartBookApplication {
 
     // start everything
