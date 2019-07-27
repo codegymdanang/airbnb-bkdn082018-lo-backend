@@ -1,6 +1,9 @@
 package com.codegym.entity;
 
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,19 +16,25 @@ public class Province {
 
     private String name;
 
-    @OneToMany(targetEntity = District.class)
+//    @OneToMany(targetEntity = District.class)
+    @OneToMany(targetEntity = District.class,
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER)
+    @Fetch(value = FetchMode.SUBSELECT)
     private List<District> districtList;
-
-    @OneToMany(targetEntity = Village.class)
-    private List<Village> villageList;
-
-    public List<Village> getVillageList() {
-        return villageList;
-    }
-
-    public void setVillageList(List<Village> villageList) {
-        this.villageList = villageList;
-    }
+//
+////    @OneToMany(targetEntity = Village.class)
+//    @OneToMany(targetEntity = Village.class,
+//            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH}, fetch = FetchType.EAGER)
+//    @Fetch(value = FetchMode.SUBSELECT)
+//    private List<Village> villageList;
+//
+//    public List<Village> getVillageList() {
+//        return villageList;
+//    }
+//
+//    public void setVillageList(List<Village> villageList) {
+//        this.villageList = villageList;
+//    }
 
     public List<District> getDistrictList() {
         return districtList;
