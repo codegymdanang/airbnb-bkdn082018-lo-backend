@@ -1,0 +1,5 @@
+
+ksquid:S00100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßãô˜ýÿÿÿÿ
+vsquid:UselessImportCheck"FRemove this unused import 'org.springframework.stereotype.Repository'.(¦ýÍýüÿÿÿÿ8••ÍúÂ-
+ksquid:S00100
+"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ¸ßÜýÿÿÿÿ
