@@ -18,18 +18,40 @@ public class AppConfig implements WebMvcConfigurer {
         messageSource.setDefaultEncoding("UTF-8");
         return messageSource;
     }
+
     @Bean
     public VillageService villageService() {
         return new VillageServiceImpl();
 
     }
+
+    @Bean
+    public AccountService accountService() {
+        return new AccountServiceImpl();
+    }
+
     @Bean
     public DistrictService districtService() {
         return new DistrictServiceImpl();
     }
+
     @Bean
     public ProvinceService provinceService() {
         return new ProvinceServiceImpl();
     }
 
+    @Bean
+    public RatingService ratingService() {
+        return new RatingServiceImpl();
+    }
+
+    @Bean
+    public OrderDetailService orderDetailService() {
+        return new OrderDetailServiceImpl();
+    }
+
+    @Bean
+    public HouseService houseService() {
+        return new HouseServiceImpl();
+    }
 }

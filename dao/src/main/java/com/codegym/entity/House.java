@@ -1,7 +1,6 @@
 package com.codegym.entity;
 
 import javax.persistence.*;
-import org.springframework.stereotype.Component;
 
 @Entity
 @Table(name = "house")
@@ -14,11 +13,19 @@ public class House {
     private String name;
     private String image;
     private String description;
-    private String bathRoomQuantity;
-    private String bedRoomQuantity;
-    private String price;
+    private Integer bathRoomQuantity;
+    private Integer bedRoomQuantity;
+    private Double price;
 
     public House() {
+    }
+
+    public House(String name, String description, Integer bathRoomQuantity, Integer bedRoomQuantity, Double price) {
+        this.name = name;
+        this.description = description;
+        this.bathRoomQuantity = bathRoomQuantity;
+        this.bedRoomQuantity = bedRoomQuantity;
+        this.price = price;
     }
 
     public Long getId() {
@@ -37,15 +44,15 @@ public class House {
         return description;
     }
 
-    public String getBathRoomQuantity() {
+    public Integer getBathRoomQuantity() {
         return bathRoomQuantity;
     }
 
-    public String getBedRoomQuantity() {
+    public Integer getBedRoomQuantity() {
         return bedRoomQuantity;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return price;
     }
 
@@ -65,15 +72,16 @@ public class House {
         this.description = description;
     }
 
-    public void setBathRoomQuantity(String bathRoomQuantity) {
+    public void setBathRoomQuantity(Integer bathRoomQuantity) {
         this.bathRoomQuantity = bathRoomQuantity;
     }
 
-    public void setBedRoomQuantity(String bedRoomQuantity) {
+    public void setBedRoomQuantity(Integer bedRoomQuantity) {
         this.bedRoomQuantity = bedRoomQuantity;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 }
+

@@ -10,9 +10,9 @@ import java.util.Optional;
 public interface DistrictService {
     List<District> findAll();
 
-//    List<District> findAllById_Province(Long id);
-//
-//    List<District> findAllDistrictByName_Province(String name);
-//
-//    Optional<District> findById(Long id);
+    List<District> findAllById_Province(Long id);
+
+    List<District> findAllDistrictByName_Province(String name);
+
+    Optional<District> findById(Long id);
 }
