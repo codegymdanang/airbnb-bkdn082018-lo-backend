@@ -1,18 +1,0 @@
-
-nsquid:CommentedOutCodeLinen"<This block of commented-out lines of code should be removed.(Ô¢Óùýÿÿÿÿ8‚¬é™Ã-
-nsquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(óœ™Óúÿÿÿÿ8‚¬é™Ã-
-gsquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(­¦ýÿÿÿÿ
-squid:S1488&"mImmediately return this expression instead of assigning it to the temporary variable "bCryptPasswordEncoder".(µ–Çµüÿÿÿÿ8¹‡ë™Ã-
-nsquid:CommentedOutCodeLineV"<This block of commented-out lines of code should be removed.(¸¢˜Ïøÿÿÿÿ8‚¬é™Ã-
-nsquid:CommentedOutCodeLineE"<This block of commented-out lines of code should be removed.(íìŠøûÿÿÿÿ8‚¬é™Ã-
-nsquid:CommentedOutCodeLineR"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8‚¬é™Ã-
-U
-squid:S1060"9Replace this use of System.out or System.err by a logger.(ÂòÜ8¹‡ë™Ã-
-Ÿsquid:UselessImportCheck
-"oRemove this unused import 'org.springframework.security.config.annotation.web.configuration.EnableWebSecurity'.(ŸÜÑýÿÿÿÿ8òµ£óÂ-
-nsquid:CommentedOutCodeLinep"<This block of commented-out lines of code should be removed.(ˆÇß”úÿÿÿÿ8‚¬é™Ã-
-nsquid:CommentedOutCodeLineA"<This block of commented-out lines of code should be removed.(ÛøÌáýÿÿÿÿ8¹‡ë™Ã-
-‡squid:UselessImportCheck"\Remove this unused import 'org.springframework.security.web.util.matcher.AndRequestMatcher'.(¿¥Ñ“8«´°÷Â-
-isquid:CommentedOutCodeLineP"<This block of commented-out lines of code should be removed.(ÔÍÞÍ8‚¬é™Ã-
-tsquid:S2068-"V'password' detected in this expression, review this potentially hard-coded credential.(¿Ìàø8¹‡ë™Ã-
-isquid:CommentedOutCodeLineh"<This block of commented-out lines of code should be removed.(Æ—Á‚8‚¬é™Ã-
