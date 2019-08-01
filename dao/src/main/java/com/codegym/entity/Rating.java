@@ -18,9 +18,9 @@ public class Rating {
     private Timestamp postDate;
 
 
-    @ManyToOne(targetEntity = Account.class)
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "id_account")
-    private Account account;
+    private User user;
 
     public Rating() {
     }
@@ -41,8 +41,8 @@ public class Rating {
         return postDate;
     }
 
-    public Account getAccount() {
-        return account;
+    public User getUser() {
+        return user;
     }
 
     public void setId(Long id) {
@@ -61,7 +61,7 @@ public class Rating {
         this.postDate = postDate;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setUser(User user) {
+        this.user= user;
     }
 }

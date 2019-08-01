@@ -14,8 +14,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @Configuration
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
 @EntityScan("com.codegym.entity")
-@EnableJpaRepositories(basePackages = {"com.codegym.repository"})
-@ComponentScan(basePackages = {  "com.codegym.entity", "com.loo.controller","com.loo.config","com.looo.service","com.codegym.repository"})
+@EnableJpaRepositories(basePackages = {"com.codegym.repository","com.loo.message"})
+@ComponentScan(basePackages = { "com.loo.message", "com.codegym.entity", "com.loo.controller","com.loo.config","com.looo.service","com.codegym.repository"})
 public class StartBookApplication {
 
     // start everything

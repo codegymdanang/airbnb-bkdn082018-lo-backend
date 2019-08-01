@@ -1,11 +1,14 @@
 package com.loo.config;
 
-import com.codegym.repository.AccountDAO;
 import com.looo.service.*;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
@@ -25,10 +28,7 @@ public class AppConfig implements WebMvcConfigurer {
 
     }
 
-    @Bean
-    public AccountService accountService() {
-        return new AccountServiceImpl();
-    }
+
 
     @Bean
     public DistrictService districtService() {

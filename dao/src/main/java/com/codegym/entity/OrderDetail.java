@@ -22,9 +22,9 @@ public class OrderDetail {
     @JoinColumn(name = "id_house")
     private House house;
 
-    @ManyToOne(targetEntity = Account.class)
+    @ManyToOne(targetEntity = User.class)
     @JoinColumn(name = "id_account")
-    private Account account;
+    private User user;
 
     public OrderDetail() {
     }
@@ -49,8 +49,8 @@ public class OrderDetail {
         return house;
     }
 
-    public Account getAccount() {
-        return account;
+    public User getUser() {
+        return user;
     }
 
     public void setId(Long id) {
@@ -73,7 +73,7 @@ public class OrderDetail {
         this.house = house;
     }
 
-    public void setAccount(Account account) {
-        this.account = account;
+    public void setAccount(User account) {
+        this.user= account;
     }
 }

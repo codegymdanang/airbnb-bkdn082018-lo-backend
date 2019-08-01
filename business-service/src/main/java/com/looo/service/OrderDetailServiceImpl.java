@@ -1,8 +1,8 @@
 package com.looo.service;
 
-import com.codegym.entity.Account;
 import com.codegym.entity.House;
 import com.codegym.entity.OrderDetail;
+import com.codegym.entity.User;
 import com.codegym.repository.OrderDetailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -34,8 +34,8 @@ public class OrderDetailServiceImpl implements OrderDetailService {
     }
 
     @Override
-    public Iterable<OrderDetail> findAllByAccount(Account account) {
-        return orderDetailRepository.findAllByAccount(account);
+    public Iterable<OrderDetail> findAllByAccount(User user) {
+        return orderDetailRepository.findAllByUser(user);
     }
 
     @Override

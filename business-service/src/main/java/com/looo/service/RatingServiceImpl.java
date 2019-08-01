@@ -1,7 +1,7 @@
 package com.looo.service;
 
-import com.codegym.entity.Account;
 import com.codegym.entity.Rating;
+import com.codegym.entity.User;
 import com.codegym.repository.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -33,8 +33,8 @@ public class RatingServiceImpl implements RatingService {
     }
 
     @Override
-    public List<Rating> findAllByAccount(Account account) {
-        return ratingRepository.findAllByAccount(account);
+    public List<Rating> findAllByUser(User user) {
+        return ratingRepository.findAllByUser(user);
     }
 
     @Override
