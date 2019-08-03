@@ -19,10 +19,20 @@ public class HouseController {
     @Autowired
     private HouseService houseService;
 
+    public HouseController(HouseService houseService) {
+        this.houseService = houseService;
+    }
+
     @GetMapping("/houses")
     public List<House> getAllHouses() {
         List<House> houses = houseService.getAllHouse();
         return houses;
+    }
+
+    @GetMapping("/houses/{id}")
+    public Optional<House> getHouse(@PathVariable("id") long id) {
+        Optional<House> house = houseService.findByid(id);
+        return house;
     }
 
     @PostMapping("/houses/create")
@@ -31,13 +41,10 @@ public class HouseController {
         return house;
     }
 
-
     @PutMapping("/houses/{id}")
-    public ResponseEntity<House> updateHouse(@PathVariable("id") long id, @RequestBody House house) {
+    public ResponseEntity<House> updateHouse(@RequestBody House house) {
 
-
-        Optional<House> houseData = houseService.findByid(id);
-
+        Optional<House> houseData = houseService.findByid(house.getId());
         if (houseData.isPresent()) {
             House _house = houseData.get();
             _house.setName(house.getName());
@@ -51,5 +58,10 @@ public class HouseController {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    @DeleteMapping("/houses/{id}")
+    public void deleteHouse(@PathVariable("id") long id) {
+        houseService.remove(id);
     }
 }

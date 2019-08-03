@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -16,7 +18,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 @EntityScan("com.codegym.entity")
 @EnableJpaRepositories(basePackages = {"com.codegym.repository","com.loo.message"})
 @ComponentScan(basePackages = { "com.loo.message", "com.codegym.entity", "com.loo.controller","com.loo.config","com.looo.service","com.codegym.repository"})
-public class StartBookApplication {
+public class StartBookApplication extends SpringBootServletInitializer {
 
     // start everything
     public static void main(String[] args) {
@@ -32,4 +34,10 @@ public class StartBookApplication {
 //            repository.save(new Book("Refactoring: Improving the Design of Existing Code", "Martin Fowler", new BigDecimal("47.99")));
 //        };
 //    }
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(StartBookApplication.class);
+
+    }
 }
