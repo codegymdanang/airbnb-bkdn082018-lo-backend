@@ -16,17 +16,16 @@ public class House {
     private Integer bathRoomQuantity;
     private Integer bedRoomQuantity;
     private Double price;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Province province;
+    @OneToOne(cascade = CascadeType.ALL)
+    private District district;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Village village;
 
     public House() {
     }
 
-    public House(String name, String description, Integer bathRoomQuantity, Integer bedRoomQuantity, Double price) {
-        this.name = name;
-        this.description = description;
-        this.bathRoomQuantity = bathRoomQuantity;
-        this.bedRoomQuantity = bedRoomQuantity;
-        this.price = price;
-    }
 
     public Long getId() {
         return id;
@@ -82,6 +81,30 @@ public class House {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Province getProvince() {
+        return province;
+    }
+
+    public void setProvince(Province province) {
+        this.province = province;
+    }
+
+    public District getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(District district) {
+        this.district = district;
+    }
+
+    public Village getVillage() {
+        return village;
+    }
+
+    public void setVillage(Village village) {
+        this.village = village;
     }
 }
 
